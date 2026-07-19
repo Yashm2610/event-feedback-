@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Sysslan IT Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Sysslan IT</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <h2 style="margin-bottom: 1.5rem; text-align: center;">Submit Event Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="event">Event Name</label>
+                    <select id="event" name="event" required>
+                        <option value="" disabled selected>Select an event</option>
+                        <option value="Cloud Computing Summit">Cloud Computing Summit</option>
+                        <option value="Blockchain Workshop">Blockchain & Web3 Workshop</option>
+                        <option value="AI ML Expo">AI & Machine Learning Expo</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Feedback</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us what you liked and what we can improve..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Submit Feedback</button>
+                <div id="formMessage" class="message-box"></div>
+            </form>
+        </div>
+
+        <div class="feedback-list" id="feedbackListContainer">
+            <h3 style="margin-bottom: 1.5rem;">Recent Feedback</h3>
+            <div id="feedbackItems">
+                <p style="color: var(--text-secondary);">Loading feedback...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sysslan IT Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
